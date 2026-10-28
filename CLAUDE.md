@@ -21,4 +21,4 @@ There is no deploy script: `deploy.ts` runs as the build's last step and is a no
 
 ## Conventions
 
-Copied from `obsidian-plugin-template`; its CLAUDE.md explains the committed `main.js`, version identity, the test preload, and the Biome/`bun fmt` split. `main.js` is committed, and every source change needs a rebuilt one in the same commit. Releases go through the `release-gate` and `release-ship` skills; tags are bare semver.
+Copied from `obsidian-plugin-template`; its CLAUDE.md explains version identity, the test preload, and the Biome/`bun fmt` split. `main.js` is gitignored build output: the vault gets it from the build, and a release attaches a fresh one. Releases go through the `release-gate` and `release-ship` skills; tags are bare semver.
