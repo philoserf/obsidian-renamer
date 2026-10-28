@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 An Obsidian plugin that renames a note's file from its `title` property, in that direction only. It replaced File Title Updater in the notes vault, where `title` is the source and filenames follow it. Scope is deliberately one action: no settings, no filename → title, no first-heading sync. A request to add one of those is a request to bring back the plugin this replaced.
 
-`src/rename.ts` is the whole policy and is pure: `filenameFromTitle` and `planRename`. `src/main.ts` only wires it to the command, the folder menu, and the `title-rename:rename` CLI verb, and performs the rename through `fileManager.renameFile` so links update.
+`src/rename.ts` is the whole policy and is pure: `filenameFromTitle` and `planRename`. `src/main.ts` only wires it to the command, the folder menu, and the `renamer:rename` CLI verb, and performs the rename through `fileManager.renameFile` so links update.
 
 ## Development Commands
 

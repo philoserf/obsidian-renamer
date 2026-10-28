@@ -1,5 +1,5 @@
 {
-  "name": "obsidian-title-rename",
+  "name": "obsidian-renamer",
   "version": "1.0.0",
   "description": "Rename a note's file from its title property",
   "main": "main.js",
