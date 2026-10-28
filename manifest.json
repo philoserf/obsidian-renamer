@@ -1,0 +1,10 @@
+{
+  "id": "title-rename",
+  "name": "Title Rename",
+  "version": "1.0.0",
+  "minAppVersion": "1.13.0",
+  "description": "Rename a note's file from its title property.",
+  "author": "Mark Ayers",
+  "authorUrl": "https://github.com/philoserf",
+  "isDesktopOnly": false
+}
