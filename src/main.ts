@@ -1,7 +1,7 @@
 import { Notice, Plugin, type TFile, TFolder } from "obsidian";
 import { type Plan, planRename } from "./rename";
 
-export default class TitleRenamePlugin extends Plugin {
+export default class RenamerPlugin extends Plugin {
   override async onload(): Promise<void> {
     this.addCommand({
       id: "rename-current-note",
@@ -29,7 +29,7 @@ export default class TitleRenamePlugin extends Plugin {
     // For automation driving Obsidian through its CLI, whose `command id=` acts
     // on the active note and prints nothing.
     this.registerCliHandler(
-      "title-rename:rename",
+      "renamer:rename",
       "Rename one note's file from its title and print the result",
       {
         path: {
@@ -99,9 +99,9 @@ export default class TitleRenamePlugin extends Plugin {
     const problems = lines.filter(
       (l) => l.startsWith("skipped") || l.startsWith("error"),
     );
-    for (const l of problems) console.warn(`[Title Rename] ${l}`);
+    for (const l of problems) console.warn(`[Renamer] ${l}`);
     new Notice(
-      `Title Rename: ${renamed} renamed, ${problems.length} skipped of ${files.length}` +
+      `Renamer: ${renamed} renamed, ${problems.length} skipped of ${files.length}` +
         (problems.length ? " — see console" : ""),
     );
   }
